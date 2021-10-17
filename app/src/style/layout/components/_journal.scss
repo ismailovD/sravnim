@@ -1,0 +1,192 @@
+.journal { 
+    padding-bottom: 20px;
+    background: $dark-white;
+    position: relative;
+    
+    &__top{
+        position: absolute; 
+        left: 0;
+        width: 100%;  
+        top: 58px;
+        @include media($sm){
+            top: 35px;
+        }
+    }
+    
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 10;
+        @include media($sm){
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        color: $gray;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        @include media($lg){
+            margin-bottom: 10px;
+        }        
+
+
+        &-active{
+            color: $black;
+        }
+    }
+
+    &__item:not(:last-child){
+        margin-right: 30px;
+    }
+
+    &__tab {
+        display: none;
+
+        &-active {
+            display: block;
+        }
+    } 
+
+    &__col {
+        margin-bottom: 20px;
+    }
+      
+    &__swiper {
+        padding-top: 180px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        @include media($sm){
+            padding-top: 250px;
+        }
+    }
+    &__card { 
+        height: 100%; 
+        position: relative; 
+        border-radius: 4px;
+        overflow: hidden; 
+        min-height: 381px;
+
+        @include media($lg){
+            min-height: 300px;
+        }
+        @include media($sm){
+            min-height: 250px;
+        }
+    }
+     
+    &__img {
+        width: 100%;
+        object-fit: cover; 
+        height: 100%;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;  
+        padding-left: 25px;
+        padding-right: 50px;
+        padding-bottom: 25px;
+    }
+     
+    &__text {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: $white;
+        margin-bottom: 25px;
+
+        @include media($mini){
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__link {
+        padding: 14px;
+        background: $yellow;
+        color: $black3;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 12px;
+        border-radius: 4px;
+        @include media($md) {
+            margin-right: 8px;
+        }
+    }
+    &__link:hover {
+        box-shadow: $input-shadow;
+    }
+
+    &__btn {
+        width: 40px; 
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $icon-bg;
+        @include media($md) {
+            margin-right: 8px;
+        }
+    }
+
+    &__btn:hover &__icon{
+        fill:$yellow;
+    }
+
+    &__icon {
+        width: 19px;
+        height: 19px;
+        fill: $icon-color;
+    }
+
+    &__prev, &__next {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: $btn-shadow2;
+        background: $white;
+        position: absolute; 
+        top: 88px;
+        left: auto;
+        right: 0;
+        @include media($md){
+            display: none;
+        }
+    }
+    &__prev {
+        right: 70px;
+    }
+    &__next {
+        right: 10px;
+    }
+    &__prev:hover, &__next:hover {
+        background: $yellow;
+    }
+    &__prev-icon, &__next-icon {
+        width: 6px;
+        height: 10px;
+        fill: $black;
+    }
+    &__prev:after, &__next:after {
+        display: none;
+    }
+}

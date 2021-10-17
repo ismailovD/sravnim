@@ -1,0 +1,48 @@
+.season 
+    .container.no-gutters
+        .season__top 
+            .container 
+                h2.season__title.title__level-2 Подготовка к летнему сезону
+        .swiper.season__swiper 
+            .swiper-wrapper.season__wrapper  
+                .swiper-slide.season__slide
+                    .container 
+                        .row  
+                            mixin seasonCard(img, name, model)
+                                .col-2.col-xl-3.col-lg-4.col-md-6.col-sm-12.season__col
+                                    .season__card
+                                        .season__pic
+                                            img(src="./images/popular/"+img+".webp", alt=img).season__img
+                                        .season__desc
+                                            p.season__type= name 
+                                            p.season__model= model
+                                            span.season__price от 1 000 000 UZS
+                                        .season__more
+                                            a(href="#!").season__link Подробнее
+                                            span.season__btn 
+                                                svg.season__icon 
+                                                    use(xlink:href="./svg/sprite.svg#love")
+                                            span.season__btn 
+                                                svg.season__icon 
+                                                    use(xlink:href="./svg/sprite.svg#scales") 
+                            +seasonCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор')  
+                            +seasonCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +seasonCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +seasonCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +seasonCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +seasonCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')
+                .swiper-slide.season__slide
+                    .container 
+                        .row 
+                            +seasonCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор')  
+                            +seasonCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +seasonCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +seasonCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +seasonCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +seasonCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')
+            .swiper-button-prev.season__prev 
+                svg.season__prev-icon   
+                    use(xlink:href="./svg/sprite.svg#prev")     
+            .swiper-button-next.season__next
+                svg.season__next-icon   
+                    use(xlink:href="./svg/sprite.svg#next")

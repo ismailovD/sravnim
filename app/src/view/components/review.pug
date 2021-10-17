@@ -1,0 +1,145 @@
+.review 
+    .container.no-gutters
+        .review__top 
+            .container 
+                h2.review__title.title__level-2 Отзывы на лучшие товары
+                ul.review__list
+                    li.review__item.review__item-active  Лучшие отзывы
+                    li.review__item  Умные часы и браслеты
+                    li.review__item  Квадрокоптеры
+                    li.review__item  Мультиварки
+                    li.review__item  Тонометры
+                    li.review__item  велосипеды
+        .review__tab.review__tab-active
+            .swiper.review__swiper 
+                .swiper-wrapper.review__wrapper  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row.justify-content-center  
+                                mixin reviewCard(img, product, text, userPhoto, userName, userText, star)
+                                    .col-6.col-md-12.review__col
+                                        .review__card
+                                            .review__product 
+                                                .product__pic
+                                                    img(src="./images/review/"+img+".webp", alt=img).review__img
+                                                .review__stars(data-star=star) 
+                                                    -for(var x = 0; x < 5 ; x++)
+                                                        svg.review__star 
+                                                            use(xlink:href="./svg/sprite.svg#star")
+                                                .review__product-name= product  
+                                            .review__text
+                                                p.review__desc= text
+                                                    a(href="#!").review__link Читать полностью 
+                                                .review__user  
+                                                    img(src="./images/review/"+ userPhoto +".webp", alt="user").review__user-photo
+                                                    .review__user-info
+                                                        p.review__user-name= userName 
+                                                        p.review__user-text= userText  
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row 
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )  
+                .swiper-button-prev.review__prev 
+                    svg.review__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.review__next
+                    svg.review__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .review__tab.review__
+            .swiper.review__swiper 
+                .swiper-wrapper.review__wrapper  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row.justify-content-center    
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )  
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row 
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )  
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                .swiper-button-prev.review__prev 
+                    svg.review__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.review__next
+                    svg.review__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .review__tab.review__
+            .swiper.review__swiper 
+                .swiper-wrapper.review__wrapper  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row.justify-content-center 
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )   
+                    .swiper-slide.review__slide
+                        .container 
+                            .row 
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )  
+                .swiper-button-prev.review__prev 
+                    svg.review__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.review__next
+                    svg.review__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .review__tab.review__
+            .swiper.review__swiper 
+                .swiper-wrapper.review__wrapper  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row.justify-content-center   
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )    
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row 
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )   
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                .swiper-button-prev.review__prev 
+                    svg.review__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.review__next
+                    svg.review__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .review__tab.review__
+            .swiper.review__swiper 
+                .swiper-wrapper.review__wrapper  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row.justify-content-center  
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row 
+                               +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )  
+                .swiper-button-prev.review__prev 
+                    svg.review__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.review__next
+                    svg.review__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .review__tab.review__
+            .swiper.review__swiper 
+                .swiper-wrapper.review__wrapper  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row.justify-content-center   
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )    
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4')  
+                    .swiper-slide.review__slide
+                        .container 
+                            .row 
+                                +reviewCard('bike', 'Городской велосипед STELS Navigator 360 ','Цена. 12000-13000р в магазинах. - Полноразмерные крылья. - Велосипед красив. Классический вид, не идеальный, как у Linus roadster, например, но тем не менее радует глаз - Вес. Меньше 14 кило без багажника - Багажник, с ним ... ', 'user2', 'Артем Орлов', 'Использует несколько месяцев', '5' )   
+                                +reviewCard('аppliances', 'Скороварка REDMOND RMC-P350', 'Модель очень удачная, симпатичный дизайн, оптимальное количество кнопочек. Один из жирных плюсов - это отсрочка старта к определенному времени, не надо высчитывать время таймера, как в старых моделях и это очень удобно...', 'user1','Natalia K.','Использует несколько месяцев', '4' )  
+                .swiper-button-prev.review__prev 
+                    svg.review__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.review__next
+                    svg.review__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")

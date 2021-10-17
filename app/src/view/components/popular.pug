@@ -1,0 +1,60 @@
+.popular
+    .container.no-gutters
+        .popular__top 
+            .container 
+                h2.popular__title.title__level-2 Популярные товары
+        .swiper.popular__swiper 
+            .swiper-wrapper.popular__wrapper  
+                .swiper-slide.popular__slide
+                    .container 
+                        .row  
+                            mixin popularCard(img, name, model)
+                                .col-2.col-xl-3.col-lg-4.col-md-6.col-sm-12.popular__col
+                                    .popular__card
+                                        .popular__pic
+                                            img(src="./images/popular/"+img+".webp", alt=img).popular__img
+                                        .popular__desc
+                                            p.popular__type= name 
+                                            p.popular__model= model
+                                            span.popular__price от 1 000 000 UZS
+                                        .popular__more
+                                            a(href="#!").popular__link Подробнее
+                                            span.popular__btn 
+                                                svg.popular__icon 
+                                                    use(xlink:href="./svg/sprite.svg#love")
+                                            span.popular__btn 
+                                                svg.popular__icon 
+                                                    use(xlink:href="./svg/sprite.svg#scales") 
+                            +popularCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор') 
+                            +popularCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +popularCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +popularCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +popularCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +popularCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')  
+                            +popularCard('7', 'Наушники', 'Apple AirPods Gen2 with Wireless Charging Case ')  
+                            +popularCard('8', 'Наушники', 'Vakoss SK-830BW White наушники')  
+                            +popularCard('9', 'Наушники', 'QCY T1 Black color наушники ')  
+                            +popularCard('10', 'Наушники', 'Xelerate E6/ 300 BT Black color')  
+                            +popularCard('11', 'Аксессуар', 'Type-C Cable 2m 2.6A Fast Charge (Switch)')  
+                            +popularCard('12', 'Приставка', 'Retro Mini X6 300 Games included') 
+                .swiper-slide.popular__slide
+                    .container 
+                        .row 
+                            +popularCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор') 
+                            +popularCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +popularCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +popularCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +popularCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +popularCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')  
+                            +popularCard('7', 'Наушники', 'Apple AirPods Gen2 with Wireless Charging Case ')  
+                            +popularCard('8', 'Наушники', 'Vakoss SK-830BW White наушники')  
+                            +popularCard('9', 'Наушники', 'QCY T1 Black color наушники ')  
+                            +popularCard('10', 'Наушники', 'Xelerate E6/ 300 BT Black color')  
+                            +popularCard('11', 'Аксессуар', 'Type-C Cable 2m 2.6A Fast Charge (Switch)')  
+                            +popularCard('12', 'Приставка', 'Retro Mini X6 300 Games included')
+            .swiper-button-prev.popular__prev 
+                svg.popular__prev-icon   
+                    use(xlink:href="./svg/sprite.svg#prev")     
+            .swiper-button-next.popular__next
+                svg.popular__next-icon   
+                    use(xlink:href="./svg/sprite.svg#next")

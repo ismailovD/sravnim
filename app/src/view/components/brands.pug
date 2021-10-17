@@ -1,0 +1,18 @@
+.brands 
+    .container.no-gutters
+        .brands__top 
+            .container 
+                h2.brands__title.title__level-2 Популярные бренды
+        .swiper.brands__swiper 
+            .swiper-wrapper.brands__wrapper  
+                - var brands = ['samsung', 'mi', 'hp', 'apple', 'philips', 'casio', 'bosch','dior','sony','adidas','lg','panasonic','samsung', 'mi', 'hp', 'apple', 'philips', 'casio', 'bosch','dior','sony','adidas','lg','panasonic']
+                each item in brands
+                    .swiper-slide.brands__slide 
+                        .brands__pic
+                            img(src="./images/brands/"+ item +".webp", alt=item).brands__img
+            .swiper-button-prev.brands__prev 
+                svg.brands__prev-icon   
+                    use(xlink:href="./svg/sprite.svg#prev")     
+            .swiper-button-next.brands__next
+                svg.brands__next-icon   
+                    use(xlink:href="./svg/sprite.svg#next")

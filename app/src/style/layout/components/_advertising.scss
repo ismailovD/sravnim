@@ -1,0 +1,48 @@
+.advertising {
+    background: $dark-white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include media($xl){
+        padding-bottom: 20px;
+    }
+
+    &__col {
+        margin-bottom: 30px;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        padding-left: 19px;
+        height: 100%; 
+    }
+
+    &__first {
+        background: $yellow;
+    }
+
+    &__second {
+        background: $gray-card;
+    }
+
+    &__third {
+        background: $purple;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: $black3;
+
+        @include media($mini){
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    &__third &__title {
+        color: $white;
+    }
+}

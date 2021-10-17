@@ -1,0 +1,71 @@
+.subscribe {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: $yellow;
+
+    @include media($xl){
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $black;
+
+        @include media($xl){
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @include media($lg){
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include media($mini){
+            flex-direction: column;
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 13px 20px;
+        border: 1px solid $subscribe-border;
+        border-radius: 4px 0 0 4px;
+        @include media($mini){
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        
+        &::placeholder {
+            font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        color: $gray;
+        }
+        &:focus {
+            outline: 1px solid $dark-gray;
+        }
+    }
+    &__btn{
+        padding: 14px 28px;
+        border-radius: 0 4px 4px 0;
+        background: $purple;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 12px;
+        color: $white;
+
+        &:hover {
+            background: $hover;
+        }
+        @include media($mini){
+            border-radius: 4px; 
+        }
+    }
+}

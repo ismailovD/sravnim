@@ -1,0 +1,48 @@
+.offer 
+    .container.no-gutters
+        .offer__top 
+            .container 
+                h2.offer__title.title__level-2 Приглядитесь к этим предложениям
+        .swiper.offer__swiper 
+            .swiper-wrapper.offer__wrapper  
+                .swiper-slide.offer__slide
+                    .container 
+                        .row  
+                            mixin offerCard(img, name, model)
+                                .col-2.col-xl-3.col-lg-4.col-md-6.col-sm-12.offer__col
+                                    .offer__card
+                                        .offer__pic
+                                            img(src="./images/popular/"+img+".webp", alt=img).offer__img
+                                        .offer__desc
+                                            p.offer__type= name 
+                                            p.offer__model= model
+                                            span.offer__price от 1 000 000 UZS
+                                        .offer__more
+                                            a(href="#!").offer__link Подробнее
+                                            span.offer__btn 
+                                                svg.offer__icon 
+                                                    use(xlink:href="./svg/sprite.svg#love")
+                                            span.offer__btn 
+                                                svg.offer__icon 
+                                                    use(xlink:href="./svg/sprite.svg#scales") 
+                            +offerCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор')  
+                            +offerCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +offerCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +offerCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +offerCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +offerCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')
+                .swiper-slide.offer__slide
+                    .container 
+                        .row 
+                            +offerCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор')  
+                            +offerCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +offerCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +offerCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +offerCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +offerCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')
+            .swiper-button-prev.offer__prev 
+                svg.offer__prev-icon   
+                    use(xlink:href="./svg/sprite.svg#prev")     
+            .swiper-button-next.offer__next
+                svg.offer__next-icon   
+                    use(xlink:href="./svg/sprite.svg#next")

@@ -1,0 +1,108 @@
+.app {
+    background: $white;
+    padding-top: 35px;
+    overflow: hidden;
+
+    @include media($md){
+        padding-bottom: 30px;
+    }
+    @include media($mini){
+       padding-top: 20px;
+    }
+
+    &__left { 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        @include media($md){
+            padding-bottom: 30px;
+        }
+    }
+
+    &__img {
+        width: 50%;
+        object-fit: contain;
+        transform: translateY(25px);
+
+        @include media($lg){
+            width: 100%;
+        }
+        @include media($md){
+            width: 50%;
+        }
+    }
+
+    &__right {
+        max-width: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        @include media($md){
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 39.2px;
+        color: $black3;
+        margin-bottom: 20px;
+        @include media($md){
+            text-align: center;
+        }
+        @include media($mini){
+            font-size: 21px;
+            line-height: 21px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22.4px;
+        color: $black2;
+        margin-bottom: 20px;
+        @include media($md){
+            text-align: center;
+        }
+        @include media($mini){
+            font-size: 13px;
+            line-height: 19px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__link {
+        background: $black;
+        border-radius: 4px;
+        width: fit-content;
+        min-width: 137px;
+        height: 40px;
+        display: inline-block;
+        padding: 3px 13px;
+
+        @include media($mini){
+            min-width: 100px;
+        }
+        &:not(:last-child){
+            margin-right: 18px;
+        }
+
+        &:hover {
+            box-shadow: $card-shadow;
+        }
+    }
+
+    &__google,
+    &__apple { 
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        @include media($mini){
+            width: 80%;
+        }
+    }
+}

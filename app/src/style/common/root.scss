@@ -1,0 +1,68 @@
+$fonts: ("Helvetica", 'Regular' , 400),
+        ("Helvetica", 'Bold' , 700),
+        ("Helvetica", 'Light', 300);
+
+@each $name, $sub-name, $w in $fonts {
+    @font-face {
+        font-family: $name;
+        src: url(../fonts/#{$name}/#{$name}-#{$sub-name}.woff);
+        font-weight: $w;
+    }
+}  
+$white: #fff; 
+$black: #000;
+$black2: #222222;
+$black3: #333333;
+$black4: #444444;
+$yellow: #FFD600;
+$yellow-opacity:rgba(255, 214, 0, 0.46);
+$purple:#553280;
+$purple-bg-opacity: rgba(85, 50, 128, 0.05);
+$btn-shadow:0px 2px 20px rgba(47, 47, 47, 0.25);
+$btn-shadow2:0px 2px 20px rgba(198, 198, 198, 0.25);
+$gray:#90989F;
+$dark-white: #FAFAFA;
+$dark-gray:#999999;
+$sign-bg:#B2B2B2;
+$footer-bg: #FEFDFD;
+$top-bottom-bg:#F7F9FC;
+$icon-color:#B5B5B5;
+$icon-bg:#F5F7FA;
+$border: #EAEAEA;
+$bbCard: #e7e7e7;
+$input-shadow:0 0 10px 0 rgba(0, 0, 0, 0.25);
+$carousel-bg: #56AEEE;
+$hover:#3A37D2;
+$card-shadow: 0px 10px 40px 0 rgba(18, 42, 96, 0.1);
+$gray-line:#f4f4f4;
+$gray-card:#E8EAFC;
+$star:#DFDFDF;
+$review-border:#f0f0f0;
+$subscribe-border: #e8e8e8;
+$social-icon:#CECECE;
+$input-border-bottom: 1px solid rgba(255, 214, 0, 0.43);
+
+
+.title__level-2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    color: $black3;
+    padding-bottom: 21px; 
+    position: relative;
+    display: inline-block;
+
+    @include media($sm){
+        font-size: 25px;
+    }
+}
+.title__level-2:after {
+    content: ''; 
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $yellow;
+    border-radius: 2px;
+}

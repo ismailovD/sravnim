@@ -1,0 +1,180 @@
+.journal 
+    .container.no-gutters
+        .journal__top 
+            .container 
+                h2.journal__title.title__level-2 Журнал маркета
+                ul.journal__list
+                    li.journal__item.journal__item-active  Гид по гаджетам
+                    li.journal__item  Забота о здоровье
+                    li.journal__item  Подсказки родителям
+                    li.journal__item  Идеи для дома
+                    li.journal__item  Дачные решения
+                    li.journal__item  Уход за питомцами
+        .journal__tab.journal__tab-active
+            .swiper.journal__swiper 
+                .swiper-wrapper.journal__wrapper  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row.justify-content-center  
+                                mixin journalCard(img, title)
+                                    .col-4.col-xl-6.col-md-12.journal__col
+                                        .journal__card 
+                                            img(src="./images/journal/"+img+".webp", alt=img).journal__img
+                                            .journal__desc
+                                                h3.journal__text= title 
+                                                a(href="#!").journal__link Смотреть статьи 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                .swiper-button-prev.journal__prev 
+                    svg.journal__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.journal__next
+                    svg.journal__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .journal__tab.journal__
+            .swiper.journal__swiper 
+                .swiper-wrapper.journal__wrapper  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row.justify-content-center  
+                                mixin journalCard(img, title)
+                                    .col-4.col-xl-6.col-md-12.journal__col
+                                        .journal__card 
+                                            img(src="./images/journal/"+img+".webp", alt=img).journal__img
+                                            .journal__desc
+                                                h3.journal__text= title 
+                                                a(href="#!").journal__link Смотреть статьи 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                .swiper-button-prev.journal__prev 
+                    svg.journal__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.journal__next
+                    svg.journal__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .journal__tab.journal__
+            .swiper.journal__swiper 
+                .swiper-wrapper.journal__wrapper  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row.justify-content-center  
+                                mixin journalCard(img, title)
+                                    .col-4.col-xl-6.col-md-12.journal__col
+                                        .journal__card 
+                                            img(src="./images/journal/"+img+".webp", alt=img).journal__img
+                                            .journal__desc
+                                                h3.journal__text= title 
+                                                a(href="#!").journal__link Смотреть статьи 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                .swiper-button-prev.journal__prev 
+                    svg.journal__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.journal__next
+                    svg.journal__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .journal__tab.journal__
+            .swiper.journal__swiper 
+                .swiper-wrapper.journal__wrapper  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row.justify-content-center  
+                                mixin journalCard(img, title)
+                                    .col-4.col-xl-6.col-md-12.journal__col
+                                        .journal__card 
+                                            img(src="./images/journal/"+img+".webp", alt=img).journal__img
+                                            .journal__desc
+                                                h3.journal__text= title 
+                                                a(href="#!").journal__link Смотреть статьи 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                .swiper-button-prev.journal__prev 
+                    svg.journal__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.journal__next
+                    svg.journal__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .journal__tab.journal__
+            .swiper.journal__swiper 
+                .swiper-wrapper.journal__wrapper  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row.justify-content-center  
+                                mixin journalCard(img, title)
+                                    .col-4.col-xl-6.col-md-12.journal__col
+                                        .journal__card 
+                                            img(src="./images/journal/"+img+".webp", alt=img).journal__img
+                                            .journal__desc
+                                                h3.journal__text= title 
+                                                a(href="#!").journal__link Смотреть статьи 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                .swiper-button-prev.journal__prev 
+                    svg.journal__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.journal__next
+                    svg.journal__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")
+        .journal__tab.journal__
+            .swiper.journal__swiper 
+                .swiper-wrapper.journal__wrapper  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row.justify-content-center  
+                                mixin journalCard(img, title)
+                                    .col-4.col-xl-6.col-md-12.journal__col
+                                        .journal__card 
+                                            img(src="./images/journal/"+img+".webp", alt=img).journal__img
+                                            .journal__desc
+                                                h3.journal__text= title 
+                                                a(href="#!").journal__link Смотреть статьи 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                    .swiper-slide.journal__slide
+                        .container 
+                            .row 
+                                +journalCard('3', 'Как заниматься спортом дома без оборудования' ) 
+                                +journalCard('2', 'Лучшие настольные игры для всей семьи' ) 
+                                +journalCard('1', 'Как ухаживать за телом в домашних условиях' )  
+                .swiper-button-prev.journal__prev 
+                    svg.journal__prev-icon   
+                        use(xlink:href="./svg/sprite.svg#prev")     
+                .swiper-button-next.journal__next
+                    svg.journal__next-icon   
+                        use(xlink:href="./svg/sprite.svg#next")

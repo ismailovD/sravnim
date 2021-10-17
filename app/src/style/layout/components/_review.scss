@@ -1,0 +1,240 @@
+.review { 
+    padding-bottom: 20px;
+    background: $white;
+    position: relative;
+    
+    &__top{
+        position: absolute; 
+        left: 0;
+        width: 100%;  
+        top: 58px;
+        @include media($sm){
+            top: 35px;
+        }
+    }
+    
+    &__title {
+        margin-bottom: 25px;
+
+        @include media($mini){
+            font-size: 22px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 10;
+        @include media($sm){
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        color: $gray;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        @include media($lg){
+            margin-bottom: 10px;
+        }        
+
+
+        &-active{
+            color: $black;
+        }
+    }
+
+    &__item:not(:last-child){
+        margin-right: 30px;
+    }
+
+    &__tab {
+        display: none;
+
+        &-active {
+            display: block;
+        }
+    } 
+
+    &__col {
+        margin-bottom: 20px;
+    }
+      
+    &__swiper {
+        padding-top: 180px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        @include media($sm){
+            padding-top: 250px;
+        }
+        
+    }
+    &__card { 
+        height: 100%; 
+        display: flex;
+        position: relative; 
+        border-radius: 4px;
+        overflow: hidden; 
+        padding: 29px 26px 26px 22px;
+        border: 1px solid $review-border;
+
+        &:hover{
+            box-shadow: $card-shadow;
+        }
+
+        @include media($xl){
+            flex-direction: column; 
+            justify-content: flex-end;
+        }
+        @include media($sm){
+            min-height: 250px;
+        }
+    }
+    &__product {
+        min-width: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 28px;
+
+        @include media($xl){
+            margin-bottom: 15px; 
+            justify-content: space-between; 
+            flex-grow: 1;
+        }
+
+        &-name {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19.6px;
+            text-align: center;
+            color: $black3;
+        }
+    } 
+
+    &__pic {
+        min-height: 116px;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover; 
+        height: 100%;
+    }
+
+    &__star {
+        width: 12px;
+        height: 12px;
+        fill: $star;
+        margin-bottom: 16px;
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: $black2;
+        margin-bottom: 25px;
+        -webkit-line-clamp:2;
+        -webkit-box-orient: vertical;
+    }
+     
+    
+
+    &__link {   
+        color: $purple;
+        font-weight: 700;  
+        @include media($md) {
+            margin-right: 8px;
+        }
+        margin-left: 5px;
+    } 
+
+    &__user {
+        display: flex;
+        align-items: center;
+
+        &-photo{
+            border-radius: 50%;
+            width: 37px;
+            height: 37px;
+            margin-right: 10px;
+        }
+
+        &-name {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: $black2;
+            margin-bottom: 5px;
+        }
+
+        &-text {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 12px;
+            color: $dark-gray;
+        }
+    }
+
+
+    &__btn {
+        width: 40px; 
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $icon-bg;
+        @include media($md) {
+            margin-right: 8px;
+        }
+    }
+
+    &__btn:hover &__icon{
+        fill:$yellow;
+    }
+
+    &__icon {
+        width: 19px;
+        height: 19px;
+        fill: $icon-color;
+    }
+
+    &__prev, &__next {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: $btn-shadow2;
+        background: $white;
+        position: absolute; 
+        top: 88px;
+        left: auto;
+        right: 0;
+        @include media($md){
+            display: none;
+        }
+    }
+    &__prev {
+        right: 70px;
+    }
+    &__next {
+        right: 10px;
+    }
+    &__prev:hover, &__next:hover {
+        background: $yellow;
+    }
+    &__prev-icon, &__next-icon {
+        width: 6px;
+        height: 10px;
+        fill: $black;
+    }
+    &__prev:after, &__next:after {
+        display: none;
+    }
+}

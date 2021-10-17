@@ -1,0 +1,48 @@
+.history 
+    .container.no-gutters
+        .history__top 
+            .container 
+                h2.history__title.title__level-2 Вы смотрели
+        .swiper.history__swiper 
+            .swiper-wrapper.history__wrapper  
+                .swiper-slide.history__slide
+                    .container 
+                        .row  
+                            mixin historyCard(img, name, model)
+                                .col-2.col-xl-3.col-lg-4.col-md-6.col-sm-12.history__col
+                                    .history__card
+                                        .history__pic
+                                            img(src="./images/popular/"+img+".webp", alt=img).history__img
+                                        .history__desc
+                                            p.history__type= name 
+                                            p.history__model= model
+                                            span.history__price от 1 000 000 UZS
+                                        .history__more
+                                            a(href="#!").history__link Подробнее
+                                            span.history__btn 
+                                                svg.history__icon 
+                                                    use(xlink:href="./svg/sprite.svg#love")
+                                            span.history__btn 
+                                                svg.history__icon 
+                                                    use(xlink:href="./svg/sprite.svg#scales") 
+                            +historyCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор')  
+                            +historyCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +historyCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +historyCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +historyCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +historyCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')
+                .swiper-slide.history__slide
+                    .container 
+                        .row 
+                            +historyCard('1', 'Телевизоры', 'Samsung UE-43RU7172 UXXH телевизор')  
+                            +historyCard('2', 'Телевизоры', 'LG 43LM6300PLA телевизор Full HD') 
+                            +historyCard('3', 'Телевизоры', 'JVC LT32VF5900 телевизор')  
+                            +historyCard('4', 'Наушники', 'Apple AirPods Gen2 with Charging Case MV7N2 ')  
+                            +historyCard('5', 'Наушники', 'Xiaomi Redmi Airdots Black наушники')  
+                            +historyCard('6', 'Наушники', 'Apple Airpods Pro MWP22ZM/ A наушники')
+            .swiper-button-prev.history__prev 
+                svg.history__prev-icon   
+                    use(xlink:href="./svg/sprite.svg#prev")     
+            .swiper-button-next.history__next
+                svg.history__next-icon   
+                    use(xlink:href="./svg/sprite.svg#next")
